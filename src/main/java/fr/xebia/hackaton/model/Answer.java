@@ -15,6 +15,10 @@ public class Answer {
         put("De quelle couleur est le cheval blanc d'Henry 4", "blanc");
         put("quelle est la commande pour faire un save and quit dans VI ?", ":wq");
         put("de qui Indiana jones tient-il son nom ?", "du chien");
+        put("qui sera le prochain batman ?", "ben affleck");
+        put("Qui est le fondateur de Facebook ?", "mark zuckerberg");
+
+
 
     }};
 
