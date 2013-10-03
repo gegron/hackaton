@@ -12,6 +12,7 @@ public class Answer {
         put("Quelle couleur est le contraire du noir", "blanc");
         put("Quel est le résultat d'addition de toutes les couleurs", "blanc");
         put("Que boit la vache ?", "Du lait");
+        put("De quelle couleur est le cheval blanc d'Henry 4", "blanc");
 
     }};
 
