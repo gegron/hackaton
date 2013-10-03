@@ -20,6 +20,8 @@ public class HackathonServer {
                 // path=/?q=Quelle est ton Identity%20%3F%20%28cf%20dashboard%29
                 String q = request.queryMap("q").value();
 
+                System.out.println("Question: " + q);
+
                 String answer = Answer.findAnswer(q);
 
                 return answer;
