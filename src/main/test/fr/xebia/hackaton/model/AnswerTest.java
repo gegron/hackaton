@@ -21,4 +21,12 @@ public class AnswerTest {
 
 
     }
+
+    @Test
+    public void should_answer_question3() throws Exception {
+        String answer = Answer.findAnswer("De quelle couleur est une robe de mariee");
+        assertThat(answer).isEqualTo("Blanche");
+
+
+    }
 }
