@@ -13,4 +13,12 @@ public class AnswerTest {
         assertThat(answer).isEqualTo("Gerome EGRON");
 
     }
+
+    @Test
+    public void should_answer_question2() throws Exception {
+        String answer = Answer.findAnswer("Quelle langage utilise tu pour coder ton serveur");
+        assertThat(answer).isEqualTo("Java");
+
+
+    }
 }
