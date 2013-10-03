@@ -16,7 +16,11 @@ public class HackathonServer {
         get(new Route("/") {
             @Override
             public Object handle(Request request, Response response) {
-                return sendOkResponse(response);
+                // path=/?q=Quelle%20est%20ton%20Identity%20%3F%20%28cf%20dashboard%29
+
+                request.queryMap("q").value();
+
+                return sendOkResponse(response, "Gerome et Jean-Eudes");
             }
         });
 
@@ -29,9 +33,9 @@ public class HackathonServer {
 
     }
 
-    private static Object sendOkResponse(Response response) {
+    private static Object sendOkResponse(Response response, String body) {
         response.status(200);
-        response.body("");
+        response.body(body);
 
         return response.raw();
     }
