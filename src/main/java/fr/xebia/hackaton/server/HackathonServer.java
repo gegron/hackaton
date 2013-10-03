@@ -7,7 +7,7 @@ import spark.Route;
 import static spark.Spark.get;
 import static spark.Spark.setPort;
 
-public class HackatonServer {
+public class HackathonServer {
     private static final String PORT = System.getenv("PORT");
 
     public static void main(String[] args) {
