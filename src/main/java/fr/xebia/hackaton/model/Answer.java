@@ -2,6 +2,8 @@ package fr.xebia.hackaton.model;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Answer {
 
@@ -33,12 +35,40 @@ public class Answer {
         put("Combien font 0 plus 1 ?", "1");
 
 
-
-
-
     }};
 
     public static String findAnswer(String question) {
+
+        Pattern plusPattern = Pattern.compile("Combien font (.*) plus (.*) \\?");
+        Pattern moinsPattern = Pattern.compile("Combien font (.*) moins (.*) \\?");
+        Pattern foisPattern = Pattern.compile("Combien font (.*) fois (.*) \\?");
+
+        Matcher plusMatcher = plusPattern.matcher(question);
+        Matcher moinsMatcher = moinsPattern.matcher(question);
+        Matcher foisMatcher = foisPattern.matcher(question);
+
+        if (plusMatcher.find()) {
+            int i = Integer.parseInt(plusMatcher.group(1)) + Integer.parseInt(plusMatcher.group(2));
+
+            return "" + i;
+        }
+
+        if (moinsMatcher.find()) {
+            int i = Integer.parseInt(plusMatcher.group(1)) - Integer.parseInt(plusMatcher.group(2));
+
+            return "" + i;
+        }
+
+        if (foisMatcher.find()) {
+            int i = Integer.parseInt(plusMatcher.group(1)) * Integer.parseInt(plusMatcher.group(2));
+
+            return "" + i;
+        }
+
         return answers.get(question);
+    }
+
+    private static Integer multiply(Integer i1, Integer i2) {
+        return i1 * i2;
     }
 }

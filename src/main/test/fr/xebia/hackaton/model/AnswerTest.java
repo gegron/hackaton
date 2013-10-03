@@ -29,4 +29,17 @@ public class AnswerTest {
 
 
     }
+
+    @Test
+    public void should_answer_plus_question() {
+        // Given
+
+
+        // When
+        String answer = Answer.findAnswer("Combien font 0 plus 1 ?");
+
+        // Then
+        System.out.println(answer);
+    }
+
 }
