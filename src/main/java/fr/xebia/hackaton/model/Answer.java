@@ -53,6 +53,7 @@ public class Answer {
 
         put("Combien font (((1.1+2)+3.14+4+(5+6+7)+(8+9+10)*4267387833344334647677634)/2*553344300034334349999000)/31878018903828899277492024491376690701584023926880", "1");
         put("3 nains vont à la mine. le 1er prend la pioche, le 2nd prend la pele, le 3ieme, qu'est ce qu'il prend ?", "la tete");
+        put("3 nains vont ? la mine. le 1er prend la pioche, le 2nd prend la pele, le 3ieme, qu'est ce qu'il prend ?", "la tete");
 
 
     }};
