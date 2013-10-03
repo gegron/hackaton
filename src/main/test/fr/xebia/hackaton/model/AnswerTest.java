@@ -1,7 +1,6 @@
 package fr.xebia.hackaton.model;
 
 
-import org.fest.assertions.Assertions;
 import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
