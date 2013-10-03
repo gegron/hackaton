@@ -20,6 +20,7 @@ public class Answer {
         put("De quelle serie vient la phrase : live long and prosper", "star trek");
         put("Combien font 1 fois 3 ?", "3");
         put("Combien font 2 moins 0 ?", "2");
+        put("Combien font 2 fois 1 ?", "2");
 
     }};
 
