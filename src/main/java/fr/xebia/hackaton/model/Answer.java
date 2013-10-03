@@ -8,6 +8,7 @@ public class Answer {
     static Map<String, String> answers = new HashMap<String, String>() {{
         put("Quelle est ton Identity ? (cf dashboard)", "Gerome EGRON");
         put("Quelle langage utilise tu pour coder ton serveur", "Java");
+        put("De quelle couleur est une robe de mariee", "Blanche");
     }};
 
     public static String findAnswer(String question) {
