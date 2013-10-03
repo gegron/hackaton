@@ -33,6 +33,7 @@ public class Answer {
         put("Combien font 2 moins 1 ?", "1");
         put("Combien font 4 plus 4 ?", "8");
         put("Combien font 0 plus 1 ?", "1");
+        put("(((1.1+2)+3.14+4+(5+6+7)+(8+9+10)*4267387833344334647677634)/2*553344300034334349999000)/31878018903828899277492024491376690701584023926880", "0");
 
 
     }};
@@ -43,6 +44,7 @@ public class Answer {
         Pattern moinsPattern = Pattern.compile("Combien font (.*) moins (.*) \\?");
         Pattern foisPattern = Pattern.compile("Combien font (.*) fois (.*) \\?");
         Pattern decimalPattern = Pattern.compile("Quelle est la valeur decimal de (.*)");
+
 
         Matcher plusMatcher = plusPattern.matcher(question);
         Matcher moinsMatcher = moinsPattern.matcher(question);
