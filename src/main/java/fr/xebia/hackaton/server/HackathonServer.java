@@ -1,5 +1,6 @@
 package fr.xebia.hackaton.server;
 
+import fr.xebia.hackaton.model.Answer;
 import spark.Request;
 import spark.Response;
 import spark.Route;
@@ -18,9 +19,11 @@ public class HackathonServer {
             public Object handle(Request request, Response response) {
                 // path=/?q=Quelle%20est%20ton%20Identity%20%3F%20%28cf%20dashboard%29
 
-                request.queryMap("q").value();
+                String q = request.queryMap("q").value();
 
-                return sendOkResponse(response, "Gerome et Jean-Eudes");
+                String answer = Answer.findAnswer(q);
+
+                return sendOkResponse(response, answer);
             }
         });
 
