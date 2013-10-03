@@ -1,5 +1,13 @@
 package fr.xebia.hackaton.model;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -43,12 +51,15 @@ public class Answer {
         Pattern moinsPattern = Pattern.compile("Combien font (.*) moins (.*) \\?");
         Pattern foisPattern = Pattern.compile("Combien font (.*) fois (.*) \\?");
         Pattern decimalPattern = Pattern.compile("Quelle est la valeur decimal de (.*)");
+        Pattern urlPattern = Pattern.compile("Que retourne l'url (.*) \\?");
+
 
 
         Matcher plusMatcher = plusPattern.matcher(question);
         Matcher moinsMatcher = moinsPattern.matcher(question);
         Matcher foisMatcher = foisPattern.matcher(question);
         Matcher decimalMatcher = decimalPattern.matcher(question);
+        Matcher urlMatcher = urlPattern.matcher(question);
 
         if (plusMatcher.find()) {
             int i = Integer.parseInt(plusMatcher.group(1)) + Integer.parseInt(plusMatcher.group(2));
@@ -75,6 +86,40 @@ public class Answer {
             int i = Integer.valueOf(number.substring(2, number.length()), 16);
 
             return "" + i;
+        }
+
+        if (urlMatcher.find()) {
+            String url = urlMatcher.group(1);
+
+            CloseableHttpClient httpclient = HttpClients.createDefault();
+            HttpGet httpGet = new HttpGet(url);
+            CloseableHttpResponse response1 = null;
+            try {
+                return String.valueOf(httpclient.execute(httpGet));
+            }
+            catch (IOException e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
+
+            try {
+                System.out.println(response1.getStatusLine());
+                HttpEntity entity1 = response1.getEntity();
+                // do something useful with the response body
+                // and ensure it is fully consumed
+                try {
+                    EntityUtils.consume(entity1);
+                }
+                catch (IOException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+            } finally {
+                try {
+                    response1.close();
+                }
+                catch (IOException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+            }
         }
 
         return answers.get(question);
