@@ -23,6 +23,8 @@ public class Answer {
         put("Combien font 2 fois 1 ?", "2");
         put("Combien font 1 plus 0 ?", "1");
         put("Combien font 2 plus 3 ?", "5");
+        put("Combien font 4 fois 2 ?", "8");
+        put("Combien font 3 plus 4 ?", "7");
 
     }};
 
