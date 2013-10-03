@@ -26,8 +26,8 @@ public class Answer {
         put("Combien font 4 fois 2 ?", "8");
         put("Combien font 3 plus 4 ?", "7");
         put("Combien font 0 plus 4 ?", "4");
-
-
+        put("Combien font 0 moins 1 ?", "-1");
+        put("Combien font 1 moins 0 ?", "1");
     }};
 
     public static String findAnswer(String question) {
