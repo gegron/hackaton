@@ -36,7 +36,7 @@ public class AnswerTest {
 
 
         // When
-        String answer = Answer.findAnswer("Combien font 1 moins 3 ?");
+        String answer = Answer.findAnswer("Quelle est la valeur decimal de Ox4c");
 
         // Then
         System.out.println(answer);

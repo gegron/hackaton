@@ -42,10 +42,12 @@ public class Answer {
         Pattern plusPattern = Pattern.compile("Combien font (.*) plus (.*) \\?");
         Pattern moinsPattern = Pattern.compile("Combien font (.*) moins (.*) \\?");
         Pattern foisPattern = Pattern.compile("Combien font (.*) fois (.*) \\?");
+        Pattern decimalPattern = Pattern.compile("Quelle est la valeur decimal de (.*)");
 
         Matcher plusMatcher = plusPattern.matcher(question);
         Matcher moinsMatcher = moinsPattern.matcher(question);
         Matcher foisMatcher = foisPattern.matcher(question);
+        Matcher decimalMatcher = decimalPattern.matcher(question);
 
         if (plusMatcher.find()) {
             int i = Integer.parseInt(plusMatcher.group(1)) + Integer.parseInt(plusMatcher.group(2));
@@ -61,6 +63,15 @@ public class Answer {
 
         if (foisMatcher.find()) {
             int i = Integer.parseInt(foisMatcher.group(1)) * Integer.parseInt(foisMatcher.group(2));
+
+            return "" + i;
+        }
+
+        if (decimalMatcher.find()) {
+            String number = decimalMatcher.group(1);
+
+
+            int i = Integer.valueOf(number.substring(2, number.length()), 16);
 
             return "" + i;
         }
