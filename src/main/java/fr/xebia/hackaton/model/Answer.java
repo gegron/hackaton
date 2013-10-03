@@ -29,6 +29,11 @@ public class Answer {
         put("Combien font 0 moins 1 ?", "-1");
         put("Combien font 1 moins 0 ?", "1");
         put("Combien font 2 moins 1 ?", "1");
+        put("Combien font 4 plus 4 ?", "8");
+        put("Combien font 0 plus 1 ?", "1");
+
+
+
 
 
     }};
