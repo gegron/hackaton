@@ -13,6 +13,8 @@ public class Answer {
         put("Quel est le résultat d'addition de toutes les couleurs", "blanc");
         put("Que boit la vache ?", "de l'eau");
         put("De quelle couleur est le cheval blanc d'Henry 4", "blanc");
+        put("quelle est la commande pour faire un save and quit dans VI ?", ":wq");
+        put("de qui Indiana jones tient-il son nom ?", "du chien");
 
     }};
 
