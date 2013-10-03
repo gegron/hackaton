@@ -91,35 +91,8 @@ public class Answer {
         if (urlMatcher.find()) {
             String url = urlMatcher.group(1);
 
-            CloseableHttpClient httpclient = HttpClients.createDefault();
-            HttpGet httpGet = new HttpGet(url);
-            CloseableHttpResponse response1 = null;
-            try {
-                return String.valueOf(httpclient.execute(httpGet));
-            }
-            catch (IOException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            }
-
-            try {
-                System.out.println(response1.getStatusLine());
-                HttpEntity entity1 = response1.getEntity();
-                // do something useful with the response body
-                // and ensure it is fully consumed
-                try {
-                    EntityUtils.consume(entity1);
-                }
-                catch (IOException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                }
-            } finally {
-                try {
-                    response1.close();
-                }
-                catch (IOException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                }
-            }
+//            Request.Get(url)
+//                    .execute().returnContent();
         }
 
         return answers.get(question);

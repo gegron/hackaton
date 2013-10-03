@@ -56,5 +56,18 @@ public class AnswerTest {
         // Then
     }
 
+    @Test
+    public void should_test_url() {
+        // Given
+
+        // When
+        String answer = Answer.findAnswer("question : Que retourne l'url http://extremestartup.soat.cloudbees.net/ws/1125 ?");
+
+        System.out.println("answer:" + answer);
+
+        // Then
+    }
+
+
 
 }
