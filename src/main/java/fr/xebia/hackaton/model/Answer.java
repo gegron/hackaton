@@ -29,7 +29,7 @@ public class Answer {
         put("Quelle langage utilise tu pour coder ton serveur", "Java");
         put("De quelle couleur est une robe de mariee", "Blanche");
         put("Quelle couleur est le contraire du noir", "blanc");
-        put("Quel est le résultat d'addition de toutes les couleurs", "blanc");
+        put("Quel est le r?sultat d'addition de toutes les couleurs", "blanc");
         put("Que boit la vache ?", "de l'eau");
         put("De quelle couleur est le cheval blanc d'Henry 4", "blanc");
         put("quelle est la commande pour faire un save and quit dans VI ?", ":wq");
