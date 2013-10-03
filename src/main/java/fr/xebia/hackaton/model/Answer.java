@@ -18,8 +18,7 @@ public class Answer {
         put("qui sera le prochain batman ?", "ben affleck");
         put("Qui est le fondateur de Facebook ?", "mark zuckerberg");
         put("De quelle serie vient la phrase : live long and prosper", "star trek");
-
-
+        put("Combien font 1 fois 3 ?", "3");
 
     }};
 
