@@ -36,7 +36,7 @@ public class AnswerTest {
 
 
         // When
-        String answer = Answer.findAnswer("Combien font 0 plus 1 ?");
+        String answer = Answer.findAnswer("Combien font 1 moins 3 ?");
 
         // Then
         System.out.println(answer);

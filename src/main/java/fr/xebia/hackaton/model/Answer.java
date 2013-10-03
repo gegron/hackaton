@@ -54,13 +54,13 @@ public class Answer {
         }
 
         if (moinsMatcher.find()) {
-            int i = Integer.parseInt(plusMatcher.group(1)) - Integer.parseInt(plusMatcher.group(2));
+            int i = Integer.parseInt(moinsMatcher.group(1)) - Integer.parseInt(moinsMatcher.group(2));
 
             return "" + i;
         }
 
         if (foisMatcher.find()) {
-            int i = Integer.parseInt(plusMatcher.group(1)) * Integer.parseInt(plusMatcher.group(2));
+            int i = Integer.parseInt(foisMatcher.group(1)) * Integer.parseInt(foisMatcher.group(2));
 
             return "" + i;
         }
