@@ -21,6 +21,8 @@ public class Answer {
         put("Combien font 1 fois 3 ?", "3");
         put("Combien font 2 moins 0 ?", "2");
         put("Combien font 2 fois 1 ?", "2");
+        put("Combien font 1 plus 0 ?", "1");
+        put("Combien font 2 plus 3 ?", "5");
 
     }};
 
