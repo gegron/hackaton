@@ -9,6 +9,10 @@ public class Answer {
         put("Quelle est ton Identity ? (cf dashboard)", "Gerome EGRON");
         put("Quelle langage utilise tu pour coder ton serveur", "Java");
         put("De quelle couleur est une robe de mariee", "Blanche");
+        put("Quelle couleur est le contraire du noir", "blanc");
+        put("Quel est le résultat d'addition de toutes les couleurs", "blanc");
+        put("Que boit la vache ?", "Du lait");
+
     }};
 
     public static String findAnswer(String question) {
