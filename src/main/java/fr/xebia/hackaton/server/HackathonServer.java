@@ -19,10 +19,10 @@ public class HackathonServer {
             public Object handle(Request request, Response response) {
                 // path=/?q=Quelle est ton Identity%20%3F%20%28cf%20dashboard%29
                 String q = request.queryMap("q").value();
+                String answer = Answer.findAnswer(q);
 
                 System.out.println("Question: " + q);
-
-                String answer = Answer.findAnswer(q);
+                System.out.println("Reponse: " + answer);
 
                 return answer;
             }
