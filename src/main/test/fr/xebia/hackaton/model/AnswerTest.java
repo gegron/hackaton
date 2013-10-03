@@ -61,7 +61,7 @@ public class AnswerTest {
         // Given
 
         // When
-        String answer = Answer.findAnswer("question : Que retourne l'url http://extremestartup.soat.cloudbees.net/ws/1125 ?");
+        String answer = Answer.findAnswer("3 nains vont à la mine. le 1er prend la pioche, le 2nd prend la pele, le 3ieme, qu'est ce qu'il prend ?");
 
         System.out.println("answer:" + answer);
 
