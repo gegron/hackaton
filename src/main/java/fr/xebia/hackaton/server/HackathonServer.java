@@ -17,8 +17,7 @@ public class HackathonServer {
         get(new Route("/") {
             @Override
             public Object handle(Request request, Response response) {
-                // path=/?q=Quelle%20est%20ton%20Identity%20%3F%20%28cf%20dashboard%29
-
+                // path=/?q=Quelle est ton Identity%20%3F%20%28cf%20dashboard%29
                 String q = request.queryMap("q").value();
 
                 String answer = Answer.findAnswer(q);
