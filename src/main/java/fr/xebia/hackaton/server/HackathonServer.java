@@ -23,7 +23,7 @@ public class HackathonServer {
 
                 String answer = Answer.findAnswer(q);
 
-                return sendOkResponse(response, answer);
+                return answer;
             }
         });
 
@@ -39,8 +39,9 @@ public class HackathonServer {
     private static Object sendOkResponse(Response response, String body) {
         response.status(200);
         response.body(body);
+        response.type("text/xml");
 
-        return response.raw();
+        return response;
     }
 
 }
